@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.astral-nav-div {
+  padding: 1% 0 1% 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* border-bottom: 1px solid #efefef; */
+}
+
+.astral-brand {
+  display: flex;
+  margin-left: 2rem;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 300;
+  letter-spacing: 10px;
+  /* color: red; */
+  /* margin-right: auto; */
+  /* margin: 2rem auto 2rem 2rem; */
+}
+
+.astral-nav {
+  display: flex;
+  list-style: none;
+  gap: 4rem;
+  margin-right: 7rem;
+  padding-bottom: 1%;
+}
+
+.astral-nav-item {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.active {
+  border-bottom: #00d2ff;
+}
+
+.trending-div {
+  padding-top: 5%;
+  width: 55%;
+  margin: auto;
+}
+.trending-div h1 {
+  font-family: sans-serif;
+  font-size: 2.5rem;
+  border-bottom: 5px solid #ff0000;
+  width: 22%;
+}
+
+.trending-data-div {
+  margin: 15px 0 15px 0;
+  /* border: 1px solid black; */
+  padding: 1%;
+  /* border-radius: 5px; */
+  border-bottom: 2px solid grey;
+  /* background: rgba( 255, 255, 255, 0.25 ); */
+  /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.1 ); */
+  /* backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px ); */
+  /* border-radius: 10px; */
+  /* border: 1px solid rgba( 255, 255, 255, 0.18 );
+  overflow: hidden; */
+}
+
+.trending-data-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+}
+
+.thumbnail {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10%;
+}
+
+.trending-data-latest {
+  margin: 0.5% 0 0.5% 0;
+}
+.trending-author {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.trending-time {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+}
+.trending-data-des {
+  /* padding-right: 30%; */
+  width: 70%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.reply-count-div {
+  position: relative;
+  left: 80%;
+  bottom: 110px;
+  font-family: 'Red Hat Display', sans-serif;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.reply-count-span {
+  margin-left: 3px;
+}
+/* .reply-count {
+  margin-bottom: 100px;
+} */
+.topics-div {
+  overflow: hidden;
+  margin-bottom: 7%;
+}
+.topic-header {
+  width: 60%;
+  margin: 50px auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.topic-header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #00d2ff;
+}
+
+.topic-header p {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.topic-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 30%);
+  grid-row-gap: 30px;
+  grid-column-gap: 75px;
+  overflow: hidden;
+}
+.topic-grid-item {
+  height: 500px;
+  border: 2px solid black;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.1 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.topic-grid-item:hover {
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.5 );
+  transition: 0.5s;
+}
+.topic-grid-item img {
+  width: 100%;
+  object-fit: cover;
+  height: 50%;
+}
+.topic-grid-item-words {
+  padding: 5%;
+  font-family: sans-serif;
+}
+.topic-grid-item-words h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  width: max-content;
+  border-bottom: 3px solid transparent;
+}
+.topic-grid-item-words h3:hover {
+  cursor: pointer;
+  border-bottom: 3px solid #00d2ff;
+}
+.topic-grid-item-words p {
+  line-height: 1.5;
+}
+/* .fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+.fade-in.appear {
+  opacity: 1;
+} */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.browse-div {
+  width: 60%;
+  margin: auto;
+}

@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+public/animations.js
 /.pnp
 .pnp.js
 
