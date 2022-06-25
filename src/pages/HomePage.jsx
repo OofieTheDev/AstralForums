@@ -1,5 +1,7 @@
-import sampleData from "../Data";
+import React from 'react';
 import { useRef, useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
+import sampleData from "../Data";
 // import { useInView } from "react-intersection-observer";
 
 export default function HomePage() {
@@ -25,6 +27,20 @@ export default function HomePage() {
       }, []);
 
     console.log(myRef)
+
+
+
+
+
+    const navigate = useNavigate(); //For going to the Main Forum Page
+
+    const gotoForum = () => {
+  
+      const path = './Forum'
+      navigate(path)
+      
+    }
+
     return (
         <>
             <div className='trending-div'>
@@ -82,8 +98,17 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
             <div className='browse-div'>
-                <button className='browse-forums-btn'>Browse All Forums</button>
+                <button className='browse-forums-btn' onClick={() => gotoForum()}>Browse All Forums</button>
             </div>
             
         </>

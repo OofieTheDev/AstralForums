@@ -1,3 +1,4 @@
+import React from 'react';
 import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
@@ -14,7 +15,7 @@ export default function NavBar() {
             
             <nav>
                 <ul className='astral-nav'>
-                    <li><NavLink className='astral-nav-item' style={textDecor} to="/">Forums</NavLink></li>
+                    <li><NavLink className='astral-nav-item' style={textDecor} to="/Forum">Forums</NavLink></li>
                     <li><NavLink className='astral-nav-item' style={textDecor} to="/">About</NavLink></li>
                     <li><NavLink className='astral-nav-item' style={textDecor} to="/">Privacy</NavLink></li>
                     <li><NavLink className='astral-nav-item' style={textDecor} to="/">Contact Us</NavLink></li>
