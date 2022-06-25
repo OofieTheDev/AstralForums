@@ -23,7 +23,11 @@ export default function HomePage() {
           entries.forEach(entry => setElementVis(entry.isIntersecting));
         });
         observer.observe(myRef.current);
-        return () => observer.unobserve(myRef.current);
+        return () => {
+            if (myRef.current) {
+                observer.unobserve(myRef.current);
+            }
+        }
       }, []);
 
     console.log(myRef)
