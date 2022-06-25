@@ -11,6 +11,20 @@ const Left = () => {
         navigate(path)
     }
 
+
+
+    const gotoTopics = () => {
+
+      const path = "/Topics"
+      navigate(path)
+    }
+
+    const gotoThreads = () => {
+
+      const path = "/Threads"
+      navigate(path)
+    }
+
   return (
     <>
     
@@ -21,8 +35,8 @@ const Left = () => {
 
         <div className="tt-container">
 
-            <button className="threads-btn forum-btns">Topics</button>
-            <button className="topics-btn forum-btns">Threads</button>
+            <button className="threads-btn forum-btns" onClick={gotoTopics}>Topics</button>
+            <button className="topics-btn forum-btns" onClick={gotoThreads}>Threads</button>
             
             {/* Popular topic */}
         </div>

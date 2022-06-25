@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 
   font-family: 'Poppins', 'Open-sans', sans-serif;
 }
@@ -493,3 +492,100 @@ create-thread-btn {
   
 }
 
+
+
+/** Tral's Feature Specific Spaggetti */
+
+.create-form-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height:30rem;
+}
+
+.create-form-container {
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  width:30rem;
+
+
+
+}
+
+.create-form-inputs {
+  outline:none;
+
+  border:2px solid #c2c6d0;
+
+  border-radius:5px;
+
+  padding:0.5rem;
+
+  margin:0 0 1rem 0;
+}
+
+.description {
+
+
+
+}
+
+
+.create-submit-btn {
+
+  border:none;
+  border-radius:5px;
+
+  /* padding:1rem 3rem 1rem 3rem; */
+
+  height:2rem;
+  width:auto;
+}
+
+
+
+/** Tral's Left Spaggetti */
+
+.topics-main-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height:5rem;
+
+}
+
+topic-container {
+
+  background-color:black;
+  margin:1rem;
+}
+
+.topic-container {
+
+  background-color:#d7dbe4;
+  margin:0.3rem;
+
+  padding:1rem 2rem 1rem 2rem;
+
+  border-radius:3px;
+
+}
+
+
+.topics-root-container {
+
+  display:flex;
+  flex-direction:column;
+
+  justify-content: center;
+  align-items: center;
+
+  height:30rem;
+
+}
