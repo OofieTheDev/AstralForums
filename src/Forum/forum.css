@@ -1,0 +1,13 @@
+* {
+    box-sizing:border-box;
+    height:0;
+    width:0;
+}
+
+
+.forum-container {
+
+    background-color:black;
+}
+
+/**DOES NOT WORK**/
