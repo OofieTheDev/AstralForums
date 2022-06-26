@@ -438,6 +438,12 @@ create-thread-btn {
 
 }
 
+.thread-container:hover {
+
+  background-color:#e4e6ed;
+  cursor:pointer;
+}
+
 .avatar-text-container {
   display:flex;
   flex-direction:row;
