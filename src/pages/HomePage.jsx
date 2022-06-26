@@ -27,6 +27,7 @@ export default function HomePage() {
             if (myRef.current) {
                 observer.unobserve(myRef.current);
             }
+            
         }
       }, []);
 

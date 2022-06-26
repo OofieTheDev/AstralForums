@@ -32,12 +32,17 @@
   padding-bottom: 1%;
 }
 
+.astral-nav li {
+  overflow: visible;
+}
+
 .astral-nav-item {
   font-family: 'Red Hat Display', sans-serif;
+  overflow: hidden;
 }
 
 .active {
-  border-bottom: #00d2ff;
+  border-bottom: 2px solid #00d2ff;
 }
 
 .trending-div {
@@ -208,7 +213,50 @@
   margin: auto;
 }
 
+.create-thread-container {
+  width: 60%;
+  margin: 5% auto;
+}
 
+.create-thread-header {
+  font-family: "Roboto", sans-serif;
+}
+
+.create-thread-label {
+  font-family: "Roboto", sans-serif;
+  margin: 2% 0 1% 0;
+}
+.create-thread-input {
+  outline: none;
+  border: 2px solid #00d2ff;
+  border-radius: 5px;
+  height: 2rem;
+  width: 50%;
+  text-indent: 2%;
+}
+
+.create-thread-area {
+  outline: none;
+  border: 2px solid #00d2ff;
+  border-radius: 5px;
+  width: 55%;
+  box-sizing: border-box;
+  padding: 1%;
+  /* background: #f0f0f0; */
+}
+
+.create-thread-btn {
+  color: #fff;
+  margin-top: 3%;
+  outline: none;
+  font-size: 1rem;
+  border: 1px solid #00d2ff;
+  background: #00d2ff;
+  padding: 0.75rem 4rem;
+  box-shadow: 0px 12px 30px rgba(0, 210, 255, 0.5);
+  border-radius: 10px;
+  cursor: pointer;
+}
 
 
 
@@ -227,7 +275,7 @@
 
 /** Tral's Sphaggeti **/
 
-forum-container {
+.forum-container {
 
   background-color:black;
 }
@@ -342,7 +390,7 @@ create-thread-btn {
   /* I wonder if this would stretch the tt buttons too when the create btn is stretched In that gap is more appropriate to use */
   
 }
-.forum-create-btn {
+/* .forum-create-btn {
 
 
 
@@ -350,7 +398,7 @@ create-thread-btn {
 .forum-thread-btn {
 
 
-}
+} */
 
 
 
