@@ -97,6 +97,15 @@ const replySchema = mongoose.Schema({
 const Thread = mongoose.model("Thread", threadSchema);
 const Reply = mongoose.model("Reply", replySchema);
 
+function authOrNot(req, res, next) {
+    console.log(req.user)
+    if (req.isAuthenticated()) {
+        next();
+    } else {
+        res.status(401).json({Error: "You are not authorized."})
+    }
+}
+
 async function createThread(title, author, des, timePosted, tags, topic) {
     await Thread.create({
         title,
@@ -138,14 +147,21 @@ app.post("/signup", (req, res) => {
     })
 })
 
-app.get("/login", passport.authenticate("local"), (req, res) => {
+app.get("/protected", authOrNot, (req, res) => {
+    res.send("You are authenticated.")
+})
+
+app.post("/login", passport.authenticate("local"), (req, res) => {
     console.log(req.body.username, req.body.password);
     console.log('Auth successful.')
+    res.send("Y");
 })
 
 app.get("/logout", (req, res, next) => {
+    if (req.isAuthenticated()) {
+        console.log("User is logged in but thats gonna change");
+    }
     req.logout(err => {
-        // console.log(err);
         if (!req.isAuthenticated()) {
             console.log("Successfully logged out.");
         } else {

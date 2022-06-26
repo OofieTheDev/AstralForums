@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from 'axios';
+axios.defaults.withCredentials = true;
 
 const headers = {
     'Content-Type' : 'application/json'
@@ -26,18 +27,19 @@ export default function Login() {
         }
     }
 
-    const loginFunc = (e) => {
+    const loginFunc = async(e) => {
         e.preventDefault()
         const LOGIN_ROUTE = "http://localhost:3001/login";
         const CREDS = {
             username,
             password
         };
-        axios.post(LOGIN_ROUTE, CREDS, headers)
-        .then(res => {
-            console.log(res);
-        }).catch(err => console.log(err));
-        navigate("/");
+        const result = await axios.post(LOGIN_ROUTE, CREDS, headers)
+        if (result.data == "Y") {
+            navigate("/")
+        } else {
+            navigate("/login")
+        }
     }
 
     return (

@@ -258,7 +258,7 @@
   cursor: pointer;
 }
 
-.login-div, .signup-div {
+.login-div, .signup-div, .logout-div {
   width: 60%;
   margin: auto;
   padding-top: 5%;

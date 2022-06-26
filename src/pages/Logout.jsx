@@ -8,6 +8,8 @@ export default function Logout() {
         })
     })
     return (
-        <h1>Successfuly logged you out.</h1>
+        <div className='logout-div'>
+            <h1>Successfully logged you out.</h1>
+        </div>
     )
 }
