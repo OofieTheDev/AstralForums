@@ -7,9 +7,9 @@ const headers = {
 };
 
 const names = {
-        TITLE: "title",
-        TAGS: "tags",
-        DESCRIPTION: "description"
+    TITLE: "title",
+    TAGS: "tags",
+    DESCRIPTION: "description"
 }
 
 export default function CreateThread() {
@@ -44,7 +44,7 @@ export default function CreateThread() {
             title,
             tags: tags.trim().split(' '),
             des: description,
-            author: 'Cody Cream',
+            author: 'Tral_JD',
             timePosted: new Date(),
             topic: "Web Development"
         }

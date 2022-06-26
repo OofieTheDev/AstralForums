@@ -19,7 +19,7 @@ export default function NavBar() {
                     <li><NavLink className='astral-nav-item' style={textDecor} to="/">About</NavLink></li>
                     <li><NavLink className='astral-nav-item' style={textDecor} to="/">Privacy</NavLink></li>
                     <li><NavLink className='astral-nav-item' style={textDecor} to="/">Contact Us</NavLink></li>
-                    <li><NavLink className='astral-nav-item' style={textDecor} to="/">Login</NavLink></li>
+                    <li><NavLink className='astral-nav-item' style={textDecor} to="/login">Login</NavLink></li>
                 </ul>
             </nav>
             

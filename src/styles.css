@@ -258,8 +258,42 @@
   cursor: pointer;
 }
 
+.login-div, .signup-div {
+  width: 60%;
+  margin: auto;
+  padding-top: 5%;
+}
 
+.login-header, .signup-header {
+  margin-bottom: 3%;
+}
 
+.login-label {
+  padding: 1% 0;
+}
+
+.login-input, .signup-input {
+  margin-bottom: 2%;
+  outline: none;
+  border: 2px solid #00d2ff;
+  border-radius: 5px;
+  height: 2rem;
+  width: 50%;
+  text-indent: 2%;
+}
+
+.login-btn, .signup-btn {
+  margin-top: 2%;
+  color: #fff;
+  outline: none;
+  font-size: 1rem;
+  border: 1px solid #00d2ff;
+  background: #00d2ff;
+  padding: 0.75rem 4rem;
+  box-shadow: 0px 12px 30px rgba(0, 210, 255, 0.5);
+  border-radius: 10px;
+  cursor: pointer;
+}
 
 
 
@@ -275,10 +309,10 @@
 
 /** Tral's Sphaggeti **/
 
-.forum-container {
+/* .forum-container {
 
   background-color:black;
-}
+} */
 
 
 .forum-nav-container {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import forumlogo from '../Images/forumlogo.svg'
+import forumlogo from '../images/forumlogo.svg'
 
 const ForumNav = () => {
 
