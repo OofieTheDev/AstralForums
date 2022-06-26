@@ -16,7 +16,9 @@ const Thread = ({ id, title, description, reply_count }) => {
     const gotoThreadUsingID = (id) => {
 
         let path = `/Forum/t/${id}`
-        navigate(path)
+        // navigate(path)
+
+        window.open(path, "_blank")
 
     }
 

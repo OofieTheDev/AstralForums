@@ -275,7 +275,7 @@
 
 /** Tral's Sphaggeti **/
 
-.forum-container {
+forum-container {
 
   background-color:black;
 }
@@ -462,7 +462,7 @@ create-thread-btn {
 
 
 .thread-container {
-
+  
   display:flex;
   flex-direction:row;
 

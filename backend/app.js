@@ -50,6 +50,11 @@ const threadSchema = mongoose.Schema({
     topic: {
         type: String,
         required: true
+    },
+
+    replies: {
+        type: Array,
+        require: true
     }
 })
 
@@ -69,13 +74,17 @@ const replySchema = mongoose.Schema({
     edited: {
         type: Boolean,
         required: true
+    },
+    thumbnail: {
+        type: String,
+        required: true
     }
 })
 
 const Thread = mongoose.model("Thread", threadSchema);
 const Reply = mongoose.model("Reply", replySchema);
 
-async function createThread(title, author, des, timePosted, tags, topic) {
+async function createThread(title, author, des, timePosted, tags, topic, replies) {
     await Thread.create({
         title,
         author,
@@ -85,7 +94,8 @@ async function createThread(title, author, des, timePosted, tags, topic) {
         topic,
         reply_count: 0,
         latest_time: timePosted,
-        latest_author: author
+        latest_author: author,
+        replies:replies
     })
 }
 
@@ -96,9 +106,42 @@ app.post("/createthread", (req, res) => {
     const timePosted = req.body.timePosted;
     const tags = req.body.tags;
     const topic = req.body.topic;
+
     createThread(title, author, des, timePosted, tags, topic);
 });
 
+
+app.get("/getthreads", (req, res) => {
+
+    Thread.find()
+        .then(result => res.send(result))
+        .catch(err => res.send(err))
+
+
+})
+
+app.get("/getathread", (req, res) => {
+
+    Thread.findById(`${req.query.threadid}`)
+        .then(result => res.send(result))
+        .catch(err => res.send(err))
+
+
+})
+
+app.post("/replytothread", (req, res) => {
+
+    const reply = req.body.reply_content;
+    console.log(reply)
+
+    Thread.updateOne(
+        { "_id":req.body.threadid },
+        { "replies":req.body.reply_content }
+    )
+        .then(result => res.send(result))
+        .catch(err => console.log(err))
+
+})
 app.listen(port, () => {
     console.log(`Server has started on Port ${port}`)
 })

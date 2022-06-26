@@ -1,21 +1,38 @@
+import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import sampleData from "../../Data";
 import ExpandedThread from "../Components/ExpandedThread";
 
+
+const headers = {
+  'Content-Type' : 'application/json'
+};
+
 const Athread = () => {
   const { threadid } = useParams();
 
   const [athread, setAThread] = useState([]);
 
+  // useEffect(() => {
+  //   console.log("use effect for a thread done!");
+
+  //   let specific_thread = sampleData.find((thread) => thread.id == threadid);
+
+  //   setAThread([...athread, specific_thread]);
+  // }, []);
+
   useEffect(() => {
-    console.log("use effect for a thread done!");
 
-    let specific_thread = sampleData.find((thread) => thread.id == threadid);
+    const url = `http://localhost:3001/getathread?threadid=${threadid}`
 
-    setAThread([...athread, specific_thread]);
-  }, []);
+    axios.get(url, headers)
+      .then(result => setAThread([result.data]))
+      .catch(err => console.log(err))
+
+  }, [])
+  
 
   return (
     <>
@@ -24,10 +41,11 @@ const Athread = () => {
       {athread.map((one_thread) => {
         return (
           <ExpandedThread
-            key={one_thread.id}
+            key={one_thread._id}
+            threadid={one_thread.id}
             thumbnail={one_thread.thumbnail}
             title={one_thread.title}
-            description={one_thread.description}
+            description={one_thread.des}
             replies={one_thread.replies}
           />
         );

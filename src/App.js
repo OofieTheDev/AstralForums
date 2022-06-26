@@ -7,7 +7,7 @@ import CreateThread from "./pages/CreateThread";
 import './styles.css';
 
 import Forum from './Forum/Forum';
-import CreatePage from './Forum/Pages/CreatePage';
+// import CreatePage from './Forum/Pages/CreatePage';
 import Topics from './Forum/Pages/Topics';
 import Threads from './Forum/Pages/Threads';
 import Athread from './Forum/Pages/Athread';
@@ -27,7 +27,7 @@ function App() {
 
         <Route exact path='/Forum' element={<Forum />} />
 
-        <Route exact path='/Create' element={<CreatePage />} />
+        {/* <Route exact path='/Create' element={<CreatePage />} /> */}
         <Route path='/' element={<DefaultLayout />}>
           <Route index element={<HomePage />} />
           <Route path='about' element={<About />} />
