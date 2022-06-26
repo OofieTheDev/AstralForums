@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-const axios = require("axios");
+import axios from 'axios';
 
 const headers = {
     'Content-Type' : 'application/json'

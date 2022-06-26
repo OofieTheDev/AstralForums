@@ -310,6 +310,7 @@
 /** Tral's Sphaggeti **/
 
 /* .forum-container {
+forum-container {
 
   background-color:black;
 } */
@@ -496,7 +497,7 @@ create-thread-btn {
 
 
 .thread-container {
-
+  
   display:flex;
   flex-direction:row;
 
@@ -518,6 +519,12 @@ create-thread-btn {
   border-bottom:1px solid #d1d5dc;
 
 
+}
+
+.thread-container:hover {
+
+  background-color:#e4e6ed;
+  cursor:pointer;
 }
 
 .avatar-text-container {

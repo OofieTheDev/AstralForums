@@ -1,15 +1,33 @@
 import React from 'react'
 import  { FaUserCircle } from 'react-icons/fa'
 import { BsChatRight } from 'react-icons/bs'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 
 // import sampleData from '../Data'
 
 const Thread = ({ id, title, description, reply_count }) => {
+
+    const navigate = useNavigate()
+
+    // const { threadid } = useParams()
+
+
+
+    const gotoThreadUsingID = (id) => {
+
+        let path = `/Forum/t/${id}`
+        // navigate(path)
+
+        window.open(path, "_blank")
+
+    }
+
   return (
     <>
     
     
-        <div className="thread-container">
+        <div className="thread-container" onClick={() => gotoThreadUsingID(id)}>
+        {/* target="_blank" */}
 
             <div className="avatar-text-container">
 

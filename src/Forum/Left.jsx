@@ -7,7 +7,7 @@ const Left = () => {
 
     const gotoCreate = () => {
 
-        const path = "/Create"
+        const path = "/CreateThread"
         navigate(path)
     }
 

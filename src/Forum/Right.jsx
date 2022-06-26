@@ -1,4 +1,10 @@
+import axios from 'axios'
 import React, { useState } from 'react'
+
+
+const headers = {
+  'Content-Type':'application/json'
+}
 
 const Right = () => {
 
@@ -6,24 +12,50 @@ const Right = () => {
 
   const latestSpark = () => {
 
-    if (threadList.length > 0) {
 
-      let newList = threadList.sort((b, c) => 
+    const url = "http://localhost:3001/getthreads"
 
-        parseInt(b.postdate) - parseInt(c.postdate)
+    axios.get(url, headers)
+      .then(result => {
+        
+        let resultList = result.data
 
-      )
+        if (resultList.length > 0) {
 
-      setThreadList(newList)
+          let newList = resultList.sort((b, c) => 
 
-    } else {
+            parseInt(b.time_posted) - parseInt(c.time_posted)
 
-      console.log("List is empty for latest")
-    }
+          )
+
+          setThreadList(newList)
+            
+          
+        } else {
+
+          console.log("list is empty for latest")
+
+        }
+      })
+
+    // if (threadList.length > 0) {
+
+    //   let newList = threadList.sort((b, c) => 
+
+    //     parseInt(b.postdate) - parseInt(c.postdate)
+
+    //   )
+
+    //   setThreadList(newList)
+
+    // } else {
+
+    //   console.log("List is empty for latest")
+    // }
 
   }
 
-
+  console.log(threadList)
   const refreshSpark = () => {
 
     window.location.reload()
